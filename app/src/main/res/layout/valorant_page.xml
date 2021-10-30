@@ -9,6 +9,9 @@
     <FrameLayout
         android:layout_width="411dp"
         android:layout_height="231dp"
+        android:layout_marginBottom="361dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView8">
 
@@ -20,23 +23,23 @@
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="164dp"
-        android:layout_height="310dp"
+        android:layout_width="170dp"
+        android:layout_height="329dp"
         android:layout_marginStart="280dp"
         android:layout_marginTop="444dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ct" />
+        app:srcCompat="@drawable/yoru" />
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="165dp"
-        android:layout_height="298dp"
+        android:layout_width="180dp"
+        android:layout_height="314dp"
         android:layout_marginStart="184dp"
         android:layout_marginTop="440dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/t" />
+        app:srcCompat="@drawable/reyna" />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -45,11 +48,11 @@
         android:layout_marginBottom="592dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/imageedit_1_2969307483" />
+        app:srcCompat="@drawable/valneg" />
 
     <ScrollView
-        android:layout_width="400dp"
-        android:layout_height="229dp"
+        android:layout_width="403dp"
+        android:layout_height="215dp"
         android:layout_marginStart="3dp"
         android:layout_marginTop="350dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,9 +67,8 @@
                 android:id="@+id/textView9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/csgo"
+                android:text="@string/valorant"
                 android:textColor="@color/white" />
-
         </LinearLayout>
     </ScrollView>
 

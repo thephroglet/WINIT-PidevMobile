@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-
     android:orientation="vertical"
+    android:layout_width="match_parent"
     android:background="@drawable/r"
-    android:padding="20dp">
+    android:layout_height="match_parent">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -19,26 +15,29 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="326dp"
+                android:layout_width="219dp"
+                android:layout_height="195dp"
                 android:src="@drawable/hh" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sign in to continue"
+                android:fontFamily="@font/ralewaymed"
+                android:textColor="#FF5722"
+                android:text="      You got a team? Win together!"
                 android:textSize="18sp"
                 />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"/>
+
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/usernamesignin"
+                android:id="@+id/tournamentname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="em@il"
+                android:hint="Tournament Name"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -46,39 +45,53 @@
                     android:inputType="text"/>
             </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/pwd"
+                android:id="@+id/tournamentdesc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="password"
-                app:passwordToggleEnabled="true"
+                android:hint="Tournament Description(date, time and price)"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPassword" />
+                    android:inputType="text"/>
             </com.google.android.material.textfield.TextInputLayout>
-            <Button
-                android:id="@+id/forgetPasswordButton"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/team1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
-                android:text="forget password"
-                android:textColor="#000"/>
+                android:hint="Team1"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/team2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Team2"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
             <Button
-                android:id="@+id/buttonLoginUser"
+                android:id="@+id/buttonSave"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
-                android:text="GO"
+                android:text="Save"
                 android:textColor="#fff"/>
 
             <Button
-                android:id="@+id/buttonSignUpUser"
+                android:id="@+id/buttonCancel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
-                android:text="New user ? Sign up"
+                android:text="cancel"
                 android:textColor="#000"/>
         </LinearLayout>
     </ScrollView>

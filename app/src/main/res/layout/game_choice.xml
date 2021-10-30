@@ -8,14 +8,13 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="406dp"
-        android:layout_height="122dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        android:padding="50dp"
-        android:text="CHOOSE YOUR GAME"
-        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/squid"
+        android:text="@string/choose_your_game"
+        android:textAppearance="@style/customfontstyle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,11 +22,11 @@
         android:id="@+id/imageView"
         android:layout_width="426dp"
         android:layout_height="273dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="108dp"
         android:src="@drawable/valcs"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-4dp" />
+        tools:layout_editor_absoluteX="2dp" />
 
     <Button
         android:id="@+id/buttonval"
@@ -53,16 +52,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="56dp"
-        android:layout_marginBottom="92dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/capture_removebg_preview" />
-
     <Button
         android:id="@+id/button_second"
         android:layout_width="226dp"
@@ -70,9 +59,36 @@
         android:layout_marginStart="92dp"
         android:layout_marginBottom="28dp"
         android:backgroundTint="#FF5722"
-        android:text="Join Community"
+        android:text="@string/join"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="412dp"
+        android:fontFamily="@font/cod"
+        android:text="@string/bettergamestitle"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="371dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="452dp"
+        android:fontFamily="@font/ralewaymed"
+        android:textSize="16dp"
+        android:text="@string/bettergamescontent"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
