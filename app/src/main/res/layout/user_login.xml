@@ -35,10 +35,10 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"/>
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/usernamesignin"
+                android:id="@+id/usernamelogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="em@il"
+                android:hint="username"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"

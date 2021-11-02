@@ -53,7 +53,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_second"
+        android:id="@+id/joincommunity"
         android:layout_width="226dp"
         android:layout_height="48dp"
         android:layout_marginStart="92dp"

@@ -3,8 +3,6 @@ package tn.esprit.pidevmobile.entity;
 import androidx.room.ColumnInfo;
 import androidx.room.PrimaryKey;
 
-import java.sql.Timestamp;
-import java.util.Date;
 
 public class Tournament {
     @PrimaryKey(autoGenerate = true)
@@ -15,8 +13,12 @@ public class Tournament {
     private String team1;
     @ColumnInfo(name = "Team2")
     private String team2;
-    @ColumnInfo(name = "Description")
-    private String description;
+    @ColumnInfo(name = "Bet")
+    private float bet;
+    @ColumnInfo(name = "Date")
+    private String date;
+    @ColumnInfo(name = "Time")
+    private String time;
 
     public int getId() {
         return id;
@@ -50,29 +52,64 @@ public class Tournament {
         this.team2 = team2;
     }
 
-    public String getDescription() {
-        return description;
+    public float getBet() {
+        return bet;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setBet(float bet) {
+        this.bet = bet;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 
     public Tournament() {
     }
 
-    public Tournament(int id, String tournament, String team1, String team2, String description) {
+    public Tournament(int id, String tournament, String team1, String team2, float bet, String date, String time) {
         this.id = id;
         this.tournament = tournament;
         this.team1 = team1;
         this.team2 = team2;
-        this.description = description;
+        this.bet = bet;
+        this.date = date;
+        this.time = time;
     }
 
-    public Tournament(String tournament, String team1, String team2, String description) {
+    public Tournament(String tournament, String team1, String team2, float bet, String date, String time) {
         this.tournament = tournament;
         this.team1 = team1;
         this.team2 = team2;
-        this.description = description;
+        this.bet = bet;
+        this.date = date;
+        this.time = time;
+    }
+
+    public Tournament(int id, String tournament, String team1, String team2, float bet) {
+        this.id = id;
+        this.tournament = tournament;
+        this.team1 = team1;
+        this.team2 = team2;
+        this.bet = bet;
+    }
+
+    public Tournament(String tournament, String team1, String team2, float bet) {
+        this.tournament = tournament;
+        this.team1 = team1;
+        this.team2 = team2;
+        this.bet = bet;
     }
 }

@@ -6,57 +6,38 @@
     android:layout_height="match_parent"
     android:background="@drawable/r_neg">
 
-    <Button
-        android:id="@+id/cspatch"
-        android:layout_width="60dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="670dp"
-        android:alpha="0.00"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <pl.droidsonroids.gif.GifImageView
-        android:layout_width="60dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="670dp"
-        android:src="@drawable/update"
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="152dp"
+        android:fontFamily="@font/russki"
+        android:text="Patch Notes"
+        android:textColor="@color/white"
+        android:textSize="35dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <FrameLayout
-        android:layout_width="411dp"
-        android:layout_height="231dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8">
-
-        <VideoView
-            android:id="@+id/video_view"
-            android:layout_width="421dp"
-            android:layout_height="210dp" />
-    </FrameLayout>
-
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="164dp"
-        android:layout_height="310dp"
+        android:layout_width="170dp"
+        android:layout_height="329dp"
         android:layout_marginStart="280dp"
         android:layout_marginTop="444dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ct" />
+        app:srcCompat="@drawable/yoru" />
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="165dp"
-        android:layout_height="298dp"
+        android:layout_width="180dp"
+        android:layout_height="314dp"
         android:layout_marginStart="184dp"
         android:layout_marginTop="440dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/t" />
+        app:srcCompat="@drawable/reyna" />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -65,13 +46,14 @@
         android:layout_marginBottom="592dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/imageedit_1_2969307483" />
+        app:srcCompat="@drawable/valneg" />
 
     <ScrollView
-        android:layout_width="400dp"
-        android:layout_height="229dp"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="350dp"
+        android:layout_width="392dp"
+        android:layout_height="494dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -84,9 +66,14 @@
                 android:id="@+id/textView9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/csgo"
+                android:text="@string/valopatchnotes"
                 android:textColor="@color/white" />
 
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/patch_notes_highlights_3_09" />
         </LinearLayout>
     </ScrollView>
 

@@ -67,7 +67,7 @@
             android:id="@+id/imageView2"
             android:layout_width="133dp"
             android:layout_height="117dp"
-            android:layout_marginBottom="444dp"
+            android:layout_marginBottom="440dp"
             android:src="@drawable/capture_removebg_preview__2_"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -78,7 +78,7 @@
             android:id="@+id/textView4"
             android:layout_width="155dp"
             android:layout_height="95dp"
-            android:layout_marginTop="248dp"
+            android:layout_marginTop="307dp"
             android:layout_marginEnd="24dp"
             android:fontFamily="@font/ralewaymed"
             android:text="@string/matchmaking"
@@ -133,7 +133,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/button_first"
+            android:id="@+id/homepage"
             android:layout_width="228dp"
             android:layout_height="48dp"
             android:layout_marginStart="88dp"
