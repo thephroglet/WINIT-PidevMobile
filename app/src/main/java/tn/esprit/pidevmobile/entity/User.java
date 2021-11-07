@@ -12,10 +12,10 @@ public class User {
     private String username;
     @ColumnInfo(name = "email")
     private String email;
-    @ColumnInfo(name = "phone")
-    private String phone;
     @ColumnInfo(name = "password")
     private String password;
+    @ColumnInfo(name = "phone")
+    private String phone;
 
     public int getId() {
         return id;
@@ -57,15 +57,21 @@ public class User {
         this.password = password;
     }
 
+    public User(String username, String email, String password, String phone) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.phone = phone;
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
-                ", phone='" + phone + '\'' +
                 ", password='" + password + '\'' +
+                ", phone='" + phone + '\'' +
                 '}';
     }
-
 }

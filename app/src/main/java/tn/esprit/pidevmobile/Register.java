@@ -3,22 +3,24 @@ package tn.esprit.pidevmobile;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
+
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputLayout;
 
+import tn.esprit.pidevmobile.database.MyDatabase;
+import tn.esprit.pidevmobile.entity.User;
+
 
 public class Register extends AppCompatActivity {
     SharedPreferences sharedPreferences;
-    SharedPreferences.Editor editor;
-    Button buttonReg2;
+    Button buttonReg2, buttonLogin;
+    MyDatabase database;
     TextInputLayout txtUsername, txtPassword, txtEmail,txtPhone;
 
     // Shared preferences file name
@@ -46,7 +48,8 @@ public class Register extends AppCompatActivity {
         txtEmail = findViewById(R.id.emailUser);
         txtPhone =  findViewById(R.id.phoneUser);
         buttonReg2 = findViewById(R.id.buttonRegister);
-
+        buttonLogin =findViewById(R.id.buttonLogin);
+        database = MyDatabase.getAppDatabase(this);
 // creating an shared Preference file for the information to be stored
 // first argument is the name of file and second is the mode, 0 is private mode
 
@@ -55,6 +58,7 @@ public class Register extends AppCompatActivity {
 
         buttonReg2.setOnClickListener(new OnClickListener(){
             public void onClick (View v) {
+                User u = new User (txtUsername.getEditText().getText().toString(),txtEmail.getEditText().getText().toString(),txtPassword.getEditText().getText().toString(),txtPhone.getEditText().getText().toString());
                 SharedPreferences.Editor editor=sharedPreferences.edit();
                 String name = txtUsername.getEditText().getText().toString();
                 String email = txtEmail.getEditText().getText().toString();
@@ -74,6 +78,7 @@ public class Register extends AppCompatActivity {
                 }
                 else{
 
+                    database.userDAO().insertOne(u);
                     // as now we have information in string. Lets stored them with the help of editor
                     editor.putString(KEY_NAME, name);
                     editor.putString(KEY_EMAIL,email);
@@ -85,9 +90,16 @@ public class Register extends AppCompatActivity {
                 Intent ob = new Intent(Register.this,Login.class);
                 startActivity(ob);
 
-                Toast.makeText(Register.this,"Hello",Toast.LENGTH_SHORT).show();
+                Toast.makeText(Register.this,"Hello " +name ,Toast.LENGTH_SHORT).show();
             }}
         });
-    }
+        buttonLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Register.this,Login.class);
+                startActivity(intent);
+                }
+    });
 
     }
+}

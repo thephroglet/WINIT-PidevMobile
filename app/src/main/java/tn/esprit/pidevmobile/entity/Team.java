@@ -1,8 +1,12 @@
 package tn.esprit.pidevmobile.entity;
 
 import androidx.room.ColumnInfo;
+import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.util.ArrayList;
+
+@Entity
 public class Team {
     @PrimaryKey(autoGenerate = true)
     private int id;
@@ -14,7 +18,8 @@ public class Team {
     private String cin;
     @ColumnInfo(name = "phone")
     private String phone;
-
+    @ColumnInfo(name = "available")
+    protected Boolean available;
 
 
     public int getId() {
@@ -58,7 +63,27 @@ public class Team {
         this.cin = cin;
     }
 
+
     public Team() {
+    }
+    public Team(String s, boolean b) {
+        team = s;
+        available= b;
+    }
+
+    public boolean isAvailable() {
+        return available;
+    }
+    private static int last = 0;
+    
+    public static ArrayList<Team> createContactsList(int num) {
+        ArrayList<Team> team = new ArrayList<Team>();
+
+        for (int i = 1; i <= num; i++) {
+            team.add(new Team("Team " + ++last, i <= num / 2));
+        }
+
+        return team;
     }
 
     public Team(String team, String leader, String cin, String phone) {
@@ -68,13 +93,6 @@ public class Team {
         this.phone = phone;
     }
 
-    public Team(int id, String team, String leader, String cin, String phone) {
-        this.id = id;
-        this.team = team;
-        this.leader = leader;
-        this.cin = cin;
-        this.phone = phone;
-    }
 
     @Override
     public String toString() {

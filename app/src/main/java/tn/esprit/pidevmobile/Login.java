@@ -6,7 +6,11 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+
 import tn.esprit.pidevmobile.entity.UserSession;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,7 +23,7 @@ public class Login extends AppCompatActivity {
     private static final String PREFER_NAME = "Reg";
 
     Button buttonLoginUser;
-
+    TextView userconnected;
     TextInputLayout txtUsername, txtPassword;
 
     // User Session Manager Class
@@ -96,15 +100,23 @@ public class Login extends AppCompatActivity {
                         session.createUserLoginSession(uName,
                                 uPassword);
 
-                        // Starting MainActivity
-                        Intent i = new  Intent(getApplicationContext(),MainActivity.class);
+
+                        // Starting Activity
+                        Intent i = new  Intent(getApplicationContext(),UserProfile.class);
                         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
                         // Add new Flag to start new Activity
                         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(i);
-
                         finish();
+                        
+                        userconnected = findViewById(R.id.txt);
+                        //userconnected.setText(uName);
+                        Toast.makeText(getApplicationContext(),
+                                "Hello " + uName,
+                                Toast.LENGTH_LONG).show();
+
+
 
                     }else{
 
@@ -122,6 +134,8 @@ public class Login extends AppCompatActivity {
                             Toast.LENGTH_LONG).show();
 
                 }
+                //Intent intent = new Intent(Login.this,UserProfile.class);
+                //startActivity(intent);
 
             }
         });

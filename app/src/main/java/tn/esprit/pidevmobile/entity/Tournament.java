@@ -1,10 +1,12 @@
 package tn.esprit.pidevmobile.entity;
 
 import androidx.room.ColumnInfo;
+import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-
+@Entity
 public class Tournament {
+
     @PrimaryKey(autoGenerate = true)
     private int id;
     @ColumnInfo(name = "Tournament Name")
@@ -79,37 +81,5 @@ public class Tournament {
     public Tournament() {
     }
 
-    public Tournament(int id, String tournament, String team1, String team2, float bet, String date, String time) {
-        this.id = id;
-        this.tournament = tournament;
-        this.team1 = team1;
-        this.team2 = team2;
-        this.bet = bet;
-        this.date = date;
-        this.time = time;
-    }
 
-    public Tournament(String tournament, String team1, String team2, float bet, String date, String time) {
-        this.tournament = tournament;
-        this.team1 = team1;
-        this.team2 = team2;
-        this.bet = bet;
-        this.date = date;
-        this.time = time;
-    }
-
-    public Tournament(int id, String tournament, String team1, String team2, float bet) {
-        this.id = id;
-        this.tournament = tournament;
-        this.team1 = team1;
-        this.team2 = team2;
-        this.bet = bet;
-    }
-
-    public Tournament(String tournament, String team1, String team2, float bet) {
-        this.tournament = tournament;
-        this.team1 = team1;
-        this.team2 = team2;
-        this.bet = bet;
-    }
 }
